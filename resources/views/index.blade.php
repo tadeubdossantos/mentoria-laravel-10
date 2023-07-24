@@ -277,6 +277,6 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
     <script src="/js/dashboard.js"></script>
-    <script src="/js/color-modes.js">
+    <script src="/js/color-modes.js"></script>
 </body>
 </html>
