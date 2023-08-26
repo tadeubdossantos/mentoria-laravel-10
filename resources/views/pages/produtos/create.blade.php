@@ -20,7 +20,7 @@
     </div>
       <div class="mb-3">
         <label class="form-label">Valor</label>
-        <input type="text" class="form-control @error('valor') is-invalid @enderror" name="valor">
+        <input id='mascara_valor' value="{{ old('valor') }}" class="form-control @error('valor') is-invalid @enderror" name="valor">
         @if ($errors->has('valor'))
           <div class="invalid-feedback">
             {{ $errors->first('valor') }}
