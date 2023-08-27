@@ -9,7 +9,8 @@
     <div class="mb-3">
         <label class="form-label">Nome</label>
         {{-- o '@error' permite verificar erro de formulário no laravel--}}
-        <input type="text" class="form-control @error('nome') is-invalid @enderror" name="nome">
+        {{-- uso do método 'old()' para não haver perca de dados no formulario --}}
+        <input type="text" value="{{ old('nome') }}" class="form-control @error('nome') is-invalid @enderror" name="nome">
         {{-- verificamos se tem algum erro em 'nome' --}}
         {{-- a class 'invalid-feedback' é do próprio laravel--}}
         @if ($errors->has('nome'))
@@ -27,6 +28,6 @@
           </div>
         @endif
       </div>
-      <button type="submit" class="btn btn-success">Cadastrar</button>
+      <button type="submit" class="btn btn-success">Gravar</button>
   </form>
   @endsection

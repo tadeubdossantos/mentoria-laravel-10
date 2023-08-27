@@ -17,7 +17,7 @@ class FormRequestProduto extends FormRequest
     {
         $request = [];
         //regras aplicadas somente quando houver request via post (envio de dados de formulário )
-        if($this->method() == "POST") {
+        if($this->method() == "POST" || $this->method() == "PUT") {
             return [
                 'nome' => 'required',
                 'valor' => 'required'
