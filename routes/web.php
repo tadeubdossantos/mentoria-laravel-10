@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\VendaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,7 @@ Route::prefix('produtos')->group(function () {
     Route::delete('/delete', [ProdutosController::class, 'delete'])->name('produto.delete');	
 });
 
-//cliente
+//clientes
 Route::prefix('clientes')->group(function () {
     Route::get('/', [ClientesController::class, 'index'])->name('cliente.index');	
     //Cadastro Create
@@ -44,5 +45,16 @@ Route::prefix('clientes')->group(function () {
     
     Route::delete('/delete', [ClientesController::class, 'delete'])->name('cliente.delete');	
 });
+
+//vendas
+Route::prefix('vendas')->group(function () {
+    Route::get('/', [VendaController::class, 'index'])->name('venda.index');	
+    //Cadastro Create
+    Route::get('/cadastrarVenda', [VendaController::class, 'cadastrarVenda'])->name('cadastrar.venda');
+    Route::post('/cadastrarVenda', [VendaController::class, 'cadastrarVenda'])->name('cadastrar.venda');
+    Route::get('/enviaComprovantePorEmail/{id}', [VendaController::class, 'enviaComprovantePorEmail'])->name('enviaComprovantePorEmail.venda');
+});
+
+
 
 

@@ -45,9 +45,6 @@ class ClientesController extends Controller
             if($request->method() == "PUT") {
                 //atualiza os dados
                 $data = $request->all();
-                //no campo valor trocamos a virgula por ponto para ser gravado no banco
-                $componentes = new Componentes();
-                $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
                 
                 //busca o registro e atualiza-o
                 $buscaRegistro = Cliente::find($id);
