@@ -99,7 +99,7 @@
 </style>
 
 <!-- Custom styles for this template -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet"> --}}
 </head>
 <body>
     
@@ -160,6 +160,6 @@
     {{-- Javascript do Toastr --}}
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     
-    {!! Toastr:message() !!}
+    {!! Toastr::message() !!}
 </body>
 </html>
