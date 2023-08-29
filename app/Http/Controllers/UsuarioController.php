@@ -32,7 +32,7 @@ class UsuarioController extends Controller
         return response()->json(['success' => true]);
     }
 
-    public function cadastrarUsuario(Request $request)
+    public function cadastrarUsuario(UsuarioFormRequest $request)
     {
         if ($request->method() == "POST") {
             // cria os dados
@@ -47,7 +47,7 @@ class UsuarioController extends Controller
         return view('pages.usuario.create');
     }
 
-    public function atualizarUsuario(Request $request, $id)
+    public function atualizarUsuario(UsuarioFormRequest $request, $id)
     {
         if ($request->method() == "PUT") {
             // atualiza os dados
