@@ -1,6 +1,6 @@
 <ul class="nav flex-column">
     <li class="nav-item">
-        <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+        <a href="{{ route('dashboard.index') }}" class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
         <svg class="bi"><use xlink:href="#house-fill"/></svg>
         Dashboard
         </a>
@@ -21,6 +21,12 @@
         <a class="nav-link d-flex align-items-center gap-2" href="{{ route('cliente.index'); }}">
         <svg class="bi"><use xlink:href="#people"/></svg>
         Clientes
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link d-flex align-items-center gap-2" href="{{ route('usuario.index'); }}">
+        <svg class="bi"><use xlink:href="#people"/></svg>
+        Usuários
         </a>
     </li>
 </ul>
